@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A-series-Homes</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .root {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fffffb;
+      }
+      .logo {
+        font-size: 1.5rem;
+      }
+      header {
+       
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      nav {
+        font-size: 1.2rem;
+        display: flex;
+        margin-inline: 10%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      nav ul a{
+        text-decoration: none;
+        color: black;
+      }
+      .hero {
+        min-height: 480px;
+        max-height: fit-content;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5%;
+        display: flex;
+      }
+      .hero .info {
+        min-width: 300px;
+        height: 90%;
+        width: 40%;
+      }
+      .info h1 {
+        margin-bottom: 0;
+        font-size: 3rem;
+      }
+      .info p {
+        font-size: 1.2rem;
+      }
+      .hero .img {
+        min-width: 300px;
+        width: 40%;
+        height: auto;
+      }
+      .hero .img img {
+        width: 90%;
+        box-shadow: -17px -17px #cbcbcb;
+        height: auto;
+      }
+      .info input {
+        height: 32px;
+        border-radius: 5px;
+      }
+      .info input:first-child {
+        padding-inline: 5px;
+        width: 60%;
+      }
+      .info input:last-child {
+        width: 20%;
+        border: none;
+        font-size: 1.1rem;
+        height: 35px;
+        color: white;
+        border-radius: 5px;
+        background-color: #4d0080;
+      }
+      .catalog {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .catalog h2 {
+        font-size: 2rem;
+      }
+      .catalog.products {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 3%;
+        margin-bottom: 3%;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        min-width: 180px;
+        justify-content: center;
+        width: 25%;
+        margin-top: 2%;
+      }
+      .card * {
+        margin: 2px;
+      }
+      .card .img {
+        width: 95%;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+      }
+      .card .img img {
+        height: auto;
+        border-radius: 2px;
+        width: 100%;
+      }
+      .card h3 {
+        font-size: 1.2rem;
+      }
+      button {
+        background-color: #4d0080;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        font-size: 1.1rem;
+        padding: 8px 15px;
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+      .contact h2 {
+        font-size: 2rem;
+        margin: 0;
+      }
+      .contact p {
+        text-align: center;
+        font-size: 1.1rem;
+      }
+      .contact form {
+        width: 100%;
+        gap: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contact input {
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+      }
+      .contact input:first-child {
+        background-color: white;
+        padding-inline: 5px;
+        border: 1px rgb(63, 63, 63) solid;
+        width: 60%;
+      }
+      hr {
+        width: 90%;
+      }
+      .contact input:last-child {
+        padding: 7px 0;
+        width: 20%;
+        height: 37px;
+        color: white;
+        background-color: black;
+      }
+      footer {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+      }
+      footer ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 10px;
+      }
+      .menu {
+        display: none;
+      }
+      @media (max-width: 500px) {
+        .hero {
+          flex-wrap: wrap-reverse;
+          align-items: center;
+        }
+        .hero .info,
+        .hero .img {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .info input {
+          height: 45px !important;
+        }
+        .info h1 {
+          font-size: 2.7rem;
+        }
+        .hero .img {
+          z-index: 1;
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+        }
+        hero .img img {
+          z-index: 1;
+        }
+        .hero .info form {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          justify-content: center;
+          width: 100%;
+        }
+        .contact {
+          width: 95%;
+        }
+        .contact p {
+          font-size: 1rem;
+        }
+        footer p {
+          font-size: 0.8rem;
+        }
+        footer ul {
+          font-size: 0.8rem;
+        }
+        .menu {
+          display: block !important;
+          cursor: pointer;
+        }
+        nav {
+          /* position: relative; */
+        }
+        nav ul {
+          background-color: white;
+          flex-direction: column;
+          position: absolute;
+          display: none;
+          right: 0;
+          top: 28px;
+          left: 0;
+          padding: 20px 50px;
+          z-index: 999;
+        }
+        nav ul li{
+            line-height: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <nav>
+          <div class="logo">A-Series-Homes</div>
+          <ul id="menu-ct">
+            <li><a href="#apt">Apartments</a></li>
+            <li><a href="">Homes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <img class="menu" id="menu" src="menu.png" alt="" width="40px" />
+        </nav>
+        <div class="hero">
+          <div class="info">
+            <h1>Find Your Perfect <br />Rental Space</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              quis sapiente, assumenda earum placeat incidunt necessitatibus
+              pariatur ipsum nisi repudiandae in.
+            </p>
+            <form action="">
+              <input type="search" placeholder="search by location" />
+              <input type="submit" />
+            </form>
+          </div>
+          <div class="img">
+            <img
+              src="modern house plan - carbondale__05776.original.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </header>
+      <section class="catalog" id="apt">
+        <h2>Featured Apartments</h2>
+        <div class="catalog products">
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0036.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0039.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+
+          <div class="card">
+            <div class="img">
+              <img src="apt4/IMG-20231219-WA0043.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0063.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+        </div>
+        <button>show more</button>
+      </section>
+      <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error
+          odio exercitationem placeat, sit autem labore in quae illo fuga
+          blanditiis laudantium quos veniam laboriosam ut.
+        </p>
+        <form action="">
+          <input type="email" name="" id="" placeholder="email address" />
+          <input type="submit" />
+        </form>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum,
+          praesentium. Provident aut error facere culpa, sunt nostrum? Veritatis
+        </p>
+      </section>
+      <hr />
+      <footer>
+        <p>copyright @ASeries-Homes all rights reserved</p>
+        <ul>
+          <li>Terms of service</li>
+          <li>privacy policy</li>
+        </ul>
+      </footer>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#menu').click(function () {
+            $('#menu-ct').slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
