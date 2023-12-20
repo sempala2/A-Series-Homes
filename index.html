@@ -16,7 +16,6 @@
         background-color: #fffffe;
       }
       .logo {
-        
         height: 50px;
         width: fit-content;
       }
@@ -25,7 +24,6 @@
         height: 50px;
       }
       header {
-       
         padding-top: 10px;
         display: flex;
         flex-direction: column;
@@ -44,7 +42,7 @@
         justify-content: space-between;
         gap: 10px;
       }
-      nav ul a{
+      nav ul a {
         text-decoration: none;
         color: black;
       }
@@ -204,6 +202,7 @@
       }
       .menu {
         display: none;
+        aspect-ratio: 1/1;
       }
       @media (max-width: 500px) {
         .hero {
@@ -226,8 +225,8 @@
         }
         .catalog.products {
           gap: 0;
-        justify-content: space-evenly;
-      }
+          justify-content: space-evenly;
+        }
         .hero .img {
           z-index: 1;
           display: flex;
@@ -259,6 +258,9 @@
         .menu {
           display: block !important;
           cursor: pointer;
+          outline: none;
+          -webkit-tap-highlight-color: transparent; /* For iOS */
+          tap-highlight-color: transparent; /* For other browsers */
         }
         nav {
           /* position: relative; */
@@ -269,17 +271,17 @@
           position: absolute;
           display: none;
           right: 0;
-          top: 28px;
+          top: 50px;
           left: 0;
           padding: 20px 50px;
           z-index: 999;
         }
-        nav ul li{
-            line-height: 2rem;
+        nav ul li {
+          line-height: 2rem;
         }
       }
       @media (min-width: 600px) {
-        nav ul{
+        nav ul {
           display: flex !important;
         }
       }
@@ -289,7 +291,7 @@
     <div class="root">
       <header>
         <nav>
-          <div class="logo"><img src="img/logo.png" alt=""></div>
+          <div class="logo"><img src="img/logo.png" alt="" /></div>
           <ul id="menu-ct">
             <li><a href="#apt">Apartments</a></li>
             <li><a href="">Homes</a></li>
@@ -301,7 +303,8 @@
           <div class="info">
             <h1>Find Your Perfect <br />Rental Space</h1>
             <p>
-              Discover your dream space at Aseries Homes. Explore a variety of rental options just a click away
+              Discover your dream space at Aseries Homes. Explore a variety of
+              rental options just a click away
             </p>
             <form action="">
               <input type="search" placeholder="search by location" />
@@ -383,15 +386,14 @@
       </section>
       <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>
-          For any inquiries, feel free to reach out to us.
-        </p>
+        <p>For any inquiries, feel free to reach out to us.</p>
         <form action="">
           <input type="email" name="" id="" placeholder="email address" />
           <input type="submit" />
         </form>
         <p>
-          For more information, contact our real estate agents at (123) 456-7890 or email us at info@aserieshomes.com
+          For more information, contact our real estate agents at (123) 456-7890
+          or email us at info@aserieshomes.com
         </p>
       </section>
       <hr />
@@ -406,8 +408,17 @@
     <script src="jquery.js"></script>
     <script>
       $(document).ready(function () {
-        $('#menu').click(function () {
-            $('#menu-ct').slideToggle();
+        $("#menu").click(function () {
+          var menu = $("#menu");
+          var menuCt = $("#menu-ct");
+
+          if (menu.attr("src") === "menu.png") {
+            menu.attr("src", "menu2.png");
+          } else {
+            menu.attr("src", "menu.png");
+          }
+
+          menuCt.slideToggle();
         });
       });
     </script>
