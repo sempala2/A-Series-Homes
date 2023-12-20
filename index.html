@@ -13,10 +13,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #fffffb;
+        background-color: #fffffe;
       }
       .logo {
-        font-size: 1.5rem;
+        
+        height: 50px;
+        width: fit-content;
+      }
+      .logo img {
+        width: auto;
+        height: 50px;
       }
       header {
        
@@ -32,6 +38,7 @@
         align-items: center;
       }
       nav ul {
+        font-weight: 500;
         list-style-type: none;
         display: flex;
         justify-content: space-between;
@@ -86,8 +93,9 @@
         font-size: 1.1rem;
         height: 35px;
         color: white;
+        cursor: pointer;
         border-radius: 5px;
-        background-color: #4d0080;
+        background-color: #a88e25;
       }
       .catalog {
         display: flex;
@@ -117,19 +125,20 @@
       }
       .card .img {
         width: 95%;
+        border-radius: 5px;
         overflow: hidden;
         aspect-ratio: 4/3;
       }
       .card .img img {
         height: auto;
-        border-radius: 2px;
         width: 100%;
       }
       .card h3 {
         font-size: 1.2rem;
       }
       button {
-        background-color: #4d0080;
+        cursor: pointer;
+        background-color: #a88e25;
         border-radius: 5px;
         color: white;
         border: none;
@@ -176,6 +185,7 @@
       }
       .contact input:last-child {
         padding: 7px 0;
+        cursor: pointer;
         width: 20%;
         height: 37px;
         color: white;
@@ -214,6 +224,10 @@
         .info h1 {
           font-size: 2.7rem;
         }
+        .catalog.products {
+          gap: 0;
+        justify-content: space-evenly;
+      }
         .hero .img {
           z-index: 1;
           display: flex;
@@ -275,7 +289,7 @@
     <div class="root">
       <header>
         <nav>
-          <div class="logo">A-Series-Homes</div>
+          <div class="logo"><img src="img/logo.png" alt=""></div>
           <ul id="menu-ct">
             <li><a href="#apt">Apartments</a></li>
             <li><a href="">Homes</a></li>
@@ -287,9 +301,7 @@
           <div class="info">
             <h1>Find Your Perfect <br />Rental Space</h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-              quis sapiente, assumenda earum placeat incidunt necessitatibus
-              pariatur ipsum nisi repudiandae in.
+              Discover your dream space at Aseries Homes. Explore a variety of rental options just a click away
             </p>
             <form action="">
               <input type="search" placeholder="search by location" />
@@ -372,22 +384,19 @@
       <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error
-          odio exercitationem placeat, sit autem labore in quae illo fuga
-          blanditiis laudantium quos veniam laboriosam ut.
+          For any inquiries, feel free to reach out to us.
         </p>
         <form action="">
           <input type="email" name="" id="" placeholder="email address" />
           <input type="submit" />
         </form>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum,
-          praesentium. Provident aut error facere culpa, sunt nostrum? Veritatis
+          For more information, contact our real estate agents at (123) 456-7890 or email us at info@aserieshomes.com
         </p>
       </section>
       <hr />
       <footer>
-        <p>copyright @ASeries-Homes all rights reserved</p>
+        <p>© ASeriesHomes Inc. All rights reserved.</p>
         <ul>
           <li>Terms of service</li>
           <li>privacy policy</li>
