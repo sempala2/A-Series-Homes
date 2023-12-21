@@ -6,33 +6,71 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>A-series-Homes</title>
+
     <style>
+      @media (prefers-color-scheme: dark) {
+        /* Adjust styles for dark mode */
+        .root {
+          background-color: #f8f6f1;
+        }
+      }
+      :root {
+  color-scheme: only light;
+}
       /* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f8f6f1;
-}
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f8f6f1;
+      }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #a69347;
-  border-radius: 5px;
-}
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #a69347;
+        border-radius: 5px;
+      }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #63582b;
-}
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #63582b;
+      }
       body {
         margin: 0;
         color: #2e2e2e;
-        
+      }
+      .fa {
+        padding: 10px;
+        font-size: 20px;
+        width: 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+      }
+      .fa-facebook {
+        background: #3b5998;
+        color: white;
+      }
+
+      .fa-twitter {
+        background: #55acee;
+        color: white;
+      }
+      .fa-instagram {
+        background: #ff0000;
+        color: white;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
       }
       .root {
         font-family: sans-serif;
@@ -83,17 +121,22 @@
       nav ul li {
         padding-inline: 10px;
         height: 80%;
-        background-color: #2e2e2e;
-        border:solid 1px #00000050;
         display: flex;
         align-items: center;
         border-radius: 10px;
         line-height: 100%;
       }
+      nav ul li:last-child {
+        background-color: #2e2e2e;
+        border: solid 1px #00000050;
+      }
       nav ul a {
         line-height: 100%;
         text-decoration: none;
-        color: rgb(255, 255, 255);
+        color: #2e2e2e;
+      }
+      nav ul li:last-child a {
+        color: white;
       }
       .hero {
         margin-top: 45px;
@@ -101,7 +144,7 @@
         max-height: fit-content;
         justify-content: center;
         align-items: center;
-        background-color:#a69347;
+        background-color: #a69347;
         flex-wrap: wrap;
         display: flex;
       }
@@ -117,20 +160,19 @@
         font-size: 4vw;
       }
       .info p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       .hero .img {
         min-height: 450px;
         min-width: 300px;
         height: 70vh;
         width: 50%;
-
       }
       .hero .img img {
         width: 100%;
         height: 100%;
       }
-      .info form{
+      .info form {
         display: flex;
         width: 90%;
         align-items: center;
@@ -185,7 +227,7 @@
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        min-width: 180px;
+        min-width: 170px;
         justify-content: center;
         width: 22%;
         margin: 3px;
@@ -193,8 +235,10 @@
         /* border: 1px solid #e0e0e0; */
         border-radius: 5px;
       }
-      .card h3, .card p {
+      .card h3,
+      .card p {
         margin: 3px;
+        font-size: 1.1em;
       }
       .card .img {
         position: relative;
@@ -239,7 +283,7 @@
       }
       .contact p {
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
       .contact form {
         width: 100%;
@@ -279,7 +323,7 @@
         padding: 10px 0;
         background-color: #2e2e2e;
       }
-      footer p{
+      footer p {
         margin-left: 10px;
       }
       footer ul {
@@ -290,7 +334,7 @@
         list-style-type: none;
         gap: 10px;
       }
-      .cities{
+      .cities {
         display: flex;
         gap: 5px;
         width: 80%;
@@ -298,19 +342,58 @@
         justify-content: space-between;
         margin: 0;
       }
-      .cities p{
+      .cities p {
         font-size: 3vw;
         font-weight: bolder;
         color: #ffffff00;
         margin: 0;
+        letter-spacing: 1px;
         font-variant: small-caps;
         -webkit-text-stroke: 1px #a6934786;
+      }
+      h1 span {
+        color: #2e2e2e;
       }
       .menu {
         display: none;
         aspect-ratio: 1/1;
       }
+      .directions {
+        width: 100%;
+        background-color: white;
+        margin-top: 2%;
+      }
+      .directions h2 {
+        margin-left: 5%;
+        font-size: 3em;
+      }
+      .directions .dir {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        gap: 2%;
+        flex-wrap: wrap;
+      }
+      .dir .d {
+        min-width: 250px;
+        width: 22%;
+      }
+      .d p {
+        font-size: 1.3em;
+        margin: 10px 0;
+      }
+      .dir .d h3 {
+        font-size: 3.3rem;
+        margin: 0;
+      }
+      .d h4 {
+        margin: 0;
+        font-size: 2rem;
+      }
       @media (max-width: 650px) {
+        .dir .d {
+          width: 90%;
+        }
         .hero {
           padding-bottom: 10px;
           flex-wrap: wrap-reverse;
@@ -328,10 +411,10 @@
         .info input {
           height: 45px !important;
         }
-        .info input:last-child{
+        .info input:last-child {
           width: 25%;
         }
-        .info input:first-child{
+        .info input:first-child {
           width: 70%;
         }
         .info h1 {
@@ -358,8 +441,7 @@
           justify-content: center;
           width: 100%;
         }
-        .hero .info{
-          
+        .hero .info {
         }
         .contact {
           width: 95%;
@@ -384,7 +466,6 @@
           /* position: relative; */
         }
         nav ul {
-          
           background-color: #a69347;
           flex-direction: column;
           position: absolute;
@@ -403,6 +484,9 @@
           margin-top: 1%;
           background-color: #2e2e2e;
           line-height: 2rem;
+        }
+        nav ul li a {
+          color: white;
         }
       }
       @media (min-width: 651px) {
@@ -429,7 +513,7 @@
         </div>
         <div class="hero">
           <div class="info">
-            <h1>Find Your Perfect <br />Rental Space</h1>
+            <h1>Find Your Perfect <br /><span>Rental</span> Space</h1>
             <p>
               Discover your dream space at Aseries Homes. Explore a variety of
               rental options just a click away
@@ -539,6 +623,44 @@
         </div>
         <button>show more</button>
       </section>
+      <section class="directions">
+        <h2>It's Qick. All Online. 100% Safe.</h2>
+        <div class="dir">
+          <div class="d">
+            <h3>1</h3>
+            <h4>Pick A Places</h4>
+            <p>
+              Explore our high-quality rooms and apartments. Save favorites. Get
+              alerts. Finding your dream home could not be easier.
+            </p>
+          </div>
+          <div class="d">
+            <h3>2</h3>
+            <h4>Send A Message</h4>
+            <p>
+              Enjoy an online, private space for all conversations with Us. Ask
+              questions, share information, and see how we match.
+            </p>
+          </div>
+          <div class="d">
+            <h3>3</h3>
+            <h4>Send A Booking Request</h4>
+            <p>
+              Like a place and want to call it home? Send us a booking request.
+              You’ll know if it’s accepted or not within 12 hours.
+            </p>
+          </div>
+          <div class="d">
+            <h3>4</h3>
+            <h4>Pay And Its Yours</h4>
+            <p>
+              Pay the first month’s rent to confirm your booking.
+              Congratulations, you found your next home. We’ll protect your
+              money until you’ve moved in and checked the place out.
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <p>For any inquiries, feel free to reach out to us.</p>
@@ -550,6 +672,11 @@
           For more information, contact our real estate agents at (123) 456-7890
           or email us at info@aserieshomes.com
         </p>
+        <div class="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
       </section>
       <footer>
         <p>© ASeriesHomes Inc. All rights reserved.</p>
