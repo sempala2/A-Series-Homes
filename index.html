@@ -9,6 +9,26 @@
 
     <title>A-series-Homes</title>
     <style>
+      /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f8f6f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a69347;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #63582b;
+}
       body {
         margin: 0;
         color: #2e2e2e;
@@ -94,14 +114,14 @@
       }
       .info h1 {
         margin-bottom: 0;
-        font-size: 3rem;
+        font-size: 3.5vw;
       }
       .info p {
         font-size: 1.2rem;
       }
       .hero .img {
+        min-height: 450px;
         min-width: 300px;
-        background-color: red;
         height: 70vh;
         width: 50%;
 
@@ -146,16 +166,19 @@
         display: flex;
         width: 100%;
         flex-direction: column;
+        margin-top: 1%;
         align-items: center;
         justify-content: center;
       }
       .catalog h2 {
+        width: 95%;
         font-size: 2rem;
+        margin: 5px 0;
       }
       .catalog.products {
         flex-wrap: wrap;
+        margin: 0;
         flex-direction: row;
-        margin-bottom: 3%;
         gap: 2%;
       }
       .card {
@@ -166,7 +189,7 @@
         justify-content: center;
         width: 22%;
         margin: 3px;
-        margin-top: 2%;
+        margin-bottom: 2%;
         /* border: 1px solid #e0e0e0; */
         border-radius: 5px;
       }
@@ -244,6 +267,7 @@
         cursor: pointer;
         width: 20%;
         height: 37px;
+        font-size: 1.1rem;
         color: white;
         background-color: #2e2e2e;
       }
@@ -265,11 +289,27 @@
         list-style-type: none;
         gap: 10px;
       }
+      .cities{
+        display: flex;
+        gap: 5px;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+      }
+      .cities p{
+        font-size: 3vw;
+        font-weight: bolder;
+        color: #ffffff00;
+        margin: 0;
+        font-variant: small-caps;
+        -webkit-text-stroke: 1px #a6934779;
+      }
       .menu {
         display: none;
         aspect-ratio: 1/1;
       }
-      @media (max-width: 500px) {
+      @media (max-width: 650px) {
         .hero {
           padding-bottom: 10px;
           flex-wrap: wrap-reverse;
@@ -277,6 +317,7 @@
         }
         .hero .info,
         .hero .img {
+          min-height: unset !important;
           width: 90%;
           display: flex;
           flex-direction: column;
@@ -363,7 +404,7 @@
           line-height: 2rem;
         }
       }
-      @media (min-width: 600px) {
+      @media (min-width: 651px) {
         nav ul {
           display: flex !important;
         }
@@ -404,6 +445,13 @@
           </div>
         </div>
       </header>
+      <section class="cities">
+        <p>Naalya</p>
+        <p>Bugoloobi</p>
+        <p>kira</p>
+        <p>kyaanjya</p>
+        <p>muyenga</p>
+      </section>
       <section class="catalog" id="apt">
         <h2>Featured Apartments</h2>
         <div class="catalog products">
