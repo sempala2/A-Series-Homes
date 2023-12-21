@@ -2,18 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
     <title>A-series-Homes</title>
     <style>
       body {
         margin: 0;
+        color: #2e2e2e;
+        
       }
       .root {
         font-family: sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #fffffe;
+        background-color: #f8f6f1;
       }
       .logo {
         height: 50px;
@@ -28,10 +34,19 @@
         display: flex;
         flex-direction: column;
       }
+      .nav {
+        position: fixed;
+        background-color: #a69347;
+        top: 0;
+        border-bottom: 1px #00000060 solid;
+        z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+        width: 100%;
+      }
       nav {
         font-size: 1.2rem;
         display: flex;
         margin-inline: 10%;
+        height: 55px;
         justify-content: space-between;
         align-items: center;
       }
@@ -39,18 +54,32 @@
         font-weight: 500;
         list-style-type: none;
         display: flex;
+        height: 100%;
+        gap: 5px;
+        align-items: center;
         justify-content: space-between;
-        gap: 10px;
+      }
+      nav ul li {
+        padding-inline: 10px;
+        height: 90%;
+        background-color: #2e2e2e;
+        border:solid 1px #00000050;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        line-height: 100%;
       }
       nav ul a {
+        line-height: 100%;
         text-decoration: none;
-        color: black;
+        color: rgb(255, 255, 255);
       }
       .hero {
         min-height: 480px;
         max-height: fit-content;
         justify-content: center;
         align-items: center;
+        background-color: white;
         flex-wrap: wrap;
         gap: 5%;
         display: flex;
@@ -83,6 +112,7 @@
       }
       .info input:first-child {
         padding-inline: 5px;
+        background-color: white;
         width: 60%;
       }
       .info input:last-child {
@@ -93,7 +123,7 @@
         color: white;
         cursor: pointer;
         border-radius: 5px;
-        background-color: #a88e25;
+        background-color: #a69347;
       }
       .catalog {
         display: flex;
@@ -107,27 +137,31 @@
       .catalog.products {
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 3%;
         margin-bottom: 3%;
       }
       .card {
         display: flex;
         flex-direction: column;
         min-width: 180px;
+        background-color: #ffffff;
         justify-content: center;
-        width: 25%;
+        width: 23%;
+        margin: 3px;
         margin-top: 2%;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
       }
       .card * {
         margin: 2px;
       }
       .card .img {
         width: 95%;
-        border-radius: 5px;
+        border-radius: 10px;
         overflow: hidden;
-        aspect-ratio: 4/3;
+        aspect-ratio: 4/3.5;
       }
       .card .img img {
+        border-radius: 10px;
         height: auto;
         width: 100%;
       }
@@ -151,6 +185,7 @@
         width: 60%;
         margin-top: 5%;
         margin-bottom: 5%;
+        background-color: #f8f6f1;
       }
       .contact h2 {
         font-size: 2rem;
@@ -187,15 +222,22 @@
         width: 20%;
         height: 37px;
         color: white;
-        background-color: black;
+        background-color: #2e2e2e;
       }
       footer {
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
+        color: white;
+        background-color: #2e2e2e;
+      }
+      footer p{
+        margin-left: 10px;
       }
       footer ul {
+        margin-right: 15px;
         display: flex;
+        color: #a69347;
         align-items: center;
         list-style-type: none;
         gap: 10px;
@@ -233,7 +275,7 @@
           justify-content: center;
           margin-top: 30px;
         }
-        hero .img img {
+        .hero .img img {
           z-index: 1;
         }
         .hero .info form {
@@ -266,17 +308,24 @@
           /* position: relative; */
         }
         nav ul {
-          background-color: white;
+          
+          background-color: #a69347;
           flex-direction: column;
           position: absolute;
+          height: 200px;
           display: none;
           right: 0;
-          top: 50px;
+          top: 55px;
           left: 0;
+          margin: 0;
+          margin-top: 1px;
           padding: 20px 50px;
           z-index: 999;
         }
         nav ul li {
+          height: 30%;
+          margin-top: 1%;
+          background-color: #2e2e2e;
           line-height: 2rem;
         }
       }
@@ -290,15 +339,17 @@
   <body>
     <div class="root">
       <header>
-        <nav>
-          <div class="logo"><img src="img/logo.png" alt="" /></div>
-          <ul id="menu-ct">
-            <li><a href="#apt">Apartments</a></li>
-            <li><a href="">Homes</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <img class="menu" id="menu" src="menu.png" alt="" width="40px" />
-        </nav>
+        <div class="nav">
+          <nav>
+            <div class="logo"><img src="img/logo.png" alt="" /></div>
+            <ul id="menu-ct">
+              <li><a href="#apt">Apartments</a></li>
+              <li><a href="">Homes</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <img class="menu" id="menu" src="menu.png" alt="" width="40px" />
+          </nav>
+        </div>
         <div class="hero">
           <div class="info">
             <h1>Find Your Perfect <br />Rental Space</h1>
@@ -381,6 +432,26 @@
             <p>Ugx.150,000 / night</p>
           </div>
           <!------------------------------------------------->
+
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0036.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0039.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 rooms | 2 bathrooms</p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
         </div>
         <button>show more</button>
       </section>
@@ -396,7 +467,6 @@
           or email us at info@aserieshomes.com
         </p>
       </section>
-      <hr />
       <footer>
         <p>© ASeriesHomes Inc. All rights reserved.</p>
         <ul>
