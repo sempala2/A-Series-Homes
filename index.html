@@ -59,7 +59,7 @@
         position: fixed;
         background-color: #ffffff;
         top: 0;
-        border-bottom: 1px #00000060 solid;
+        border-bottom: 1px #2e2e2e8e solid;
         z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
         width: 100%;
       }
@@ -114,7 +114,7 @@
       }
       .info h1 {
         margin-bottom: 0;
-        font-size: 3.5vw;
+        font-size: 4vw;
       }
       .info p {
         font-size: 1.2rem;
@@ -145,7 +145,7 @@
         background-color: white;
         width: 60%;
         color: #2e2e2e;
-        border: #2e2e2e 1px solid;
+        border: #2e2e2ea9 1px solid;
       }
       .info input:last-child {
         width: 20%;
@@ -276,6 +276,7 @@
         justify-content: space-between;
         width: 100%;
         color: white;
+        padding: 10px 0;
         background-color: #2e2e2e;
       }
       footer p{
@@ -303,7 +304,7 @@
         color: #ffffff00;
         margin: 0;
         font-variant: small-caps;
-        -webkit-text-stroke: 1px #a6934779;
+        -webkit-text-stroke: 1px #a6934786;
       }
       .menu {
         display: none;
@@ -387,7 +388,7 @@
           background-color: #a69347;
           flex-direction: column;
           position: absolute;
-          height: 200px;
+          height: fit-content;
           display: none;
           right: 0;
           top: 55px;
@@ -398,7 +399,7 @@
           z-index: 999;
         }
         nav ul li {
-          height: 30%;
+          height: 60px;
           margin-top: 1%;
           background-color: #2e2e2e;
           line-height: 2rem;
@@ -420,6 +421,7 @@
             <ul id="menu-ct">
               <li><a href="#apt">Apartments</a></li>
               <li><a href="">Homes</a></li>
+              <li><a href="">Blog</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
             <img class="menu" id="menu" src="menu.png" alt="" width="40px" />
