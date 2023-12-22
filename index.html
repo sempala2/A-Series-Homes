@@ -22,8 +22,8 @@
         }
       }
       :root {
-  color-scheme: only light;
-}
+        color-scheme: only light;
+      }
       /* width */
       ::-webkit-scrollbar {
         width: 10px;
@@ -147,6 +147,7 @@
         align-items: center;
         background-color: #a69347;
         flex-wrap: wrap;
+        margin-bottom: 2%;
         display: flex;
       }
       .hero .info {
@@ -391,7 +392,11 @@
         margin: 0;
         font-size: 2rem;
       }
+      section{
+        margin: 5% 0;
+      }
       @media (max-width: 650px) {
+        
         .dir .d {
           width: 90%;
         }
@@ -399,6 +404,9 @@
           padding-bottom: 10px;
           flex-wrap: wrap-reverse;
           align-items: center;
+        }
+        .card{
+          margin: 15px 0;
         }
         .hero .info,
         .hero .img {
@@ -525,10 +533,7 @@
             </form>
           </div>
           <div class="img">
-            <img
-              src="modern.jpg"
-              alt=""
-            />
+            <img src="modern.jpg" alt="" />
           </div>
         </div>
       </header>
