@@ -48,7 +48,7 @@
       color: #2e2e2e;
       display: flex;
       align-items: center;
-      transition: all 0.1s linear;
+      transition: all 0.5s linear;
       justify-content: center;
       min-height: 100vh;
     }
@@ -149,23 +149,28 @@
       background-color: #2e2e2e;
       border: solid 1px #00000050;
     }
+
     nav ul li:last-child:hover {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       scale: 1.05;
       cursor: pointer;
     }
-    
+
     nav ul a {
       line-height: 100%;
       text-decoration: none;
       color: #2e2e2e;
     }
-    nav ul a:hover{
+
+    nav ul a:hover {
+      scale: 1.05;
       color: #a88e25;
     }
+
     nav ul li:last-child a {
       color: white;
     }
+
     .hero {
       margin-top: 45px;
       min-height: 450px;
@@ -277,9 +282,9 @@
       /* border: 1px solid #e0e0e0; */
       border-radius: 5px;
     }
-    .card:hover{
-      box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 7px 21px 0 rgba(0, 0, 0, 0.19);
-      scale: 1.005;
+
+    .card:hover {
+      scale: 1.01;
     }
     .card h3,
     .card p {
@@ -295,14 +300,17 @@
       width: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
       border-radius: 10px;
       overflow: hidden;
+      z-index: 99;
       aspect-ratio: 4/3.5;
     }
 
     .card .img img {
       border-radius: 10px;
       height: auto;
+      object-fit: fill;
       width: 100%;
       position: absolute;
     }
@@ -322,8 +330,9 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       padding: 8px 15px;
     }
-    button:hover{
-      
+
+    button:hover {
+
       scale: 1.1;
     }
 
@@ -363,7 +372,7 @@
     }
 
     .contact input:first-child {
-      
+
       background-color: white;
       padding-inline: 5px;
       border: 1px rgb(63, 63, 63) solid;
@@ -384,7 +393,8 @@
       background-color: #2e2e2e;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-    input:last-child:hover{
+
+    input:last-child:hover {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       scale: 1.1;
       transition: all linear 0.1s;
@@ -484,47 +494,128 @@
       margin: 5% 0;
     }
 
-    .loader{
+    .loader {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #ffeab6;
     }
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 100px;
-  aspect-ratio: 1;
-  color: #ffa516;
-  background:
-    linear-gradient(currentColor 0 0) 100%  0,
-    linear-gradient(currentColor 0 0) 0  100%;
-  background-size: 50.1% 50.1%;
-  background-repeat: no-repeat;
-  animation:  l7-0 1.5s infinite steps(1);
-}
-.loader::before,
-.loader::after {
-  content:"";
-  position: absolute;
-  inset: 0 50% 50% 0;
-  background: currentColor;
-  transform: scale(var(--s,1)) perspective(150px) rotateY(0deg);
-  transform-origin: bottom right; 
-  animation: l7-1 .75s infinite linear alternate;
-}
-.loader::after {
-  --s:-1,-1;
-}
-@keyframes l7-0 {
-  0%  {transform: scaleX(1)  rotate(0deg)}
-  50% {transform: scaleX(-1) rotate(-90deg)}
-}
-@keyframes l7-1 {
-  49.99% {transform:scale(var(--s,1)) perspective(150px) rotateX(-90deg) ;filter:grayscale(0)}
-  50%    {transform:scale(var(--s,1)) perspective(150px) rotateX(-90deg) ;filter:grayscale(0.8)}
-  100%   {transform:scale(var(--s,1)) perspective(150px) rotateX(-180deg);filter:grayscale(0.8)}
-}
+
+    /* HTML: <div class="loader"></div> */
+    .loader {
+      width: 100px;
+      aspect-ratio: 1;
+      color: #ffa516;
+      background:
+        linear-gradient(currentColor 0 0) 100% 0,
+        linear-gradient(currentColor 0 0) 0 100%;
+      background-size: 50.1% 50.1%;
+      background-repeat: no-repeat;
+      animation: l7-0 1.5s infinite steps(1);
+    }
+
+    .loader::before,
+    .loader::after {
+      content: "";
+      position: absolute;
+      inset: 0 50% 50% 0;
+      background: currentColor;
+      transform: scale(var(--s, 1)) perspective(150px) rotateY(0deg);
+      transform-origin: bottom right;
+      animation: l7-1 .75s infinite linear alternate;
+    }
+
+    .loader::after {
+      --s: -1, -1;
+    }
+    #c-slider{
+      width: 100%;
+      margin-inline: 100px;
+      display: flex;
+      position: absolute;
+      padding: 0;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+    }
+    #c-slider li{
+      list-style-type: none;
+      border-radius: 50%;
+      bottom: 0;
+      height: 11px;
+      aspect-ratio: 1/1;
+      width: auto;
+      background-color: #55555598;
+    }
+    #c-slider li.active {
+      background-color: #ffffffb4;
+    }
+
+    @keyframes l7-0 {
+      0% {
+        transform: scaleX(1) rotate(0deg)
+      }
+
+      50% {
+        transform: scaleX(-1) rotate(-90deg)
+      }
+    }
+
+    @keyframes l7-1 {
+      49.99% {
+        transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+        filter: grayscale(0)
+      }
+
+      50% {
+        transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+        filter: grayscale(0.8)
+      }
+
+      100% {
+        transform: scale(var(--s, 1)) perspective(150px) rotateX(-180deg);
+        filter: grayscale(0.8)
+      }
+    }
+
+    #btn1,
+    #btn2 {
+      position: absolute;
+      z-index: 999;
+      min-width: 20px;
+      aspect-ratio: 1/1;
+      height: auto;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffffb5;
+      user-select: none;
+      width: 10%;
+      display: none;
+      box-shadow: 0.2px 0.2px 7px #00000090;
+    }
+
+    #btn1 img,
+    #btn2 img {
+      width: 50%;
+      
+      height: 50%;
+    }
+
+    #btn1 {
+      left: 3px;
+      transform: rotate(180deg);
+    }
+
+    #btn2 {
+      right: 3px;
+    }
+    .card:hover #btn1,.card:hover #btn2{
+      display: flex;
+    }
+
     @media (max-width: 650px) {
 
       .dir .d {
@@ -657,7 +748,8 @@
     }
   </style>
 </head>
-<body >
+
+<body>
   <div class="loader">
     <div class="circle"></div>
   </div>
@@ -684,7 +776,7 @@
           </p>
           <form action="">
             <input type="search" placeholder="search by location" />
-            <input type="submit" value="submit"/>
+            <input type="submit" value="submit" />
           </form>
         </div>
         <div class="img">
@@ -704,6 +796,18 @@
       <div class="catalog products">
         <div class="card">
           <div class="img" id="slider">
+            <div id="btn1">
+              <img src="img/next.png" alt="">
+            </div>
+            <div id="btn2">
+              <img src="img/next.png" alt="">
+            </div>
+            <ul id="c-slider">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
           </div>
           <h3>Luxury Villa, Kampala</h3>
           <p>4 <img height="20" width="20" src="img/bdrm.svg" alt=""> &#160 1 <img height="20" width="20"
@@ -714,7 +818,7 @@
 
         <div class="card">
           <div class="img">
-            <img src="apt2/IMG-20231219-WA0039.jpg" alt="" />
+            <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
           </div>
           <h3>Luxury Villa, Kampala</h3>
           <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
@@ -858,7 +962,7 @@
   <script>
     $(document).ready(function () {
       $('.root').css('display', 'flex');
-      $('.loader').css('display','none');
+      $('.loader').css('display', 'none');
       $("#menu").click(function () {
         var menu = $("#menu");
         var menuCt = $("#menu-ct");
@@ -873,48 +977,61 @@
       });
 
       var slider = $('#slider');
+      slider.on('hover', function(){
+        $('#btn1').show();
+      });
       const imglist = [
-        'apt1/IMG-20231219-WA0036.jpg',
-        'apt2/IMG-20231219-WA0039.jpg',
-        'apt4/IMG-20231219-WA0043.jpg'
+      'apt1/IMG-20231219-WA0027.jpg',
+'apt1/IMG-20231219-WA0028.jpg',
+'apt1/IMG-20231219-WA0029.jpg',
+'apt1/IMG-20231219-WA0030.jpg',
+'apt1/IMG-20231219-WA0032.jpg',
+'apt1/IMG-20231219-WA0033.jpg',
+'apt1/IMG-20231219-WA0034.jpg',
+'apt1/IMG-20231219-WA0035.jpg',
+'apt1/IMG-20231219-WA0036.jpg'
       ];
       slider.prepend('<img id="sImage" src="apt1/IMG-20231219-WA0036.jpg" />');
       let currentIndex = 0;
-      let intervalId; // variable to store the interval ID
+      $('#c-slider li').eq(currentIndex).addClass('active');
 
-      function changeImage() {
+      function updateImage() {
         $('#sImage').attr('src', imglist[currentIndex]);
-        currentIndex = (currentIndex + 1) % imglist.length;
-      }
-
-      // Function to start the slideshow
-      function startSlideshow() {
-        // Start the slideshow and store the interval ID
-        intervalId = setInterval(changeImage, 1000);
-      }
-
-      // Hover event to start the slideshow
-      slider.hover(
-        function () {
-          // Start the slideshow when hovering over the slider
-          startSlideshow();
-        },
-        function () {
-          // Clear the interval when not hovering
-          clearInterval(intervalId);
+        $('#c-slider li').removeClass('active');
+        if(currentIndex<3){
+          $('#c-slider li').eq(currentIndex).addClass('active');
+        }else{
+          $('#c-slider li').eq(3).addClass('active');
         }
-      );
+      }
+      $('#c-slider li').on('click', function(){
+        currentIndex=$(this).index();
+        $('#sImage').attr('src', imglist[currentIndex]);
+        updateImage();
+      });
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % imglist.length;
+    updateImage();
+  }
+  
+  function showPreviousImage() {
+    currentIndex = (currentIndex - 1 + imglist.length) % imglist.length;
+    updateImage();
+  }
+      $('#btn2').on('click', showNextImage);
+      $('#btn1').on('click', showPreviousImage);
+
       var textElement = $("#changingText");
-            var words = ["Rental", "Home"];
-            var currentindex = 0;
+      var words = ["Rental", "Home"];
+      var currentindex = 0;
 
-            function changeText() {
-                textElement.text(words[currentindex]);
-                currentindex = (currentindex + 1) % words.length;
-            }
+      function changeText() {
+        textElement.text(words[currentindex]);
+        currentindex = (currentindex + 1) % words.length;
+      }
 
-            setInterval(changeText, 2000); // Change every 2000 milliseconds (2 seconds)
-            changeText(); // Initial text
+      setInterval(changeText, 2000); // Change every 2000 milliseconds (2 seconds)
+      changeText(); // Initial text
 
 
     });
