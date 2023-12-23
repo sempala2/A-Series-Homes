@@ -48,6 +48,7 @@
       color: #2e2e2e;
       display: flex;
       align-items: center;
+      transition: all 0.1s linear;
       justify-content: center;
       min-height: 100vh;
     }
@@ -140,7 +141,7 @@
       height: 80%;
       display: flex;
       align-items: center;
-      border-radius: 10px;
+      border-radius: 1.5px;
       line-height: 100%;
     }
 
@@ -148,18 +149,22 @@
       background-color: #2e2e2e;
       border: solid 1px #00000050;
     }
+    nav ul li:last-child:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      scale: 1.05;
+      cursor: pointer;
+    }
     
     nav ul a {
       line-height: 100%;
       text-decoration: none;
       color: #2e2e2e;
     }
-
+    nav ul a:hover{
+      color: #a88e25;
+    }
     nav ul li:last-child a {
       color: white;
-    }
-    nav ul a:hover{
-      color: #a69347 !important;
     }
     .hero {
       margin-top: 45px;
@@ -272,12 +277,16 @@
       /* border: 1px solid #e0e0e0; */
       border-radius: 5px;
     }
-
+    .card:hover{
+      box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 7px 21px 0 rgba(0, 0, 0, 0.19);
+      scale: 1.005;
+    }
     .card h3,
     .card p {
       margin: 3px;
       font-size: 1.1em;
       display: flex;
+      margin-left: 5px;
       align-items: center;
     }
 
@@ -308,8 +317,14 @@
       border-radius: 5px;
       color: white;
       border: none;
+      transition: all 0.1s ease-in;
       font-size: 1.1rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       padding: 8px 15px;
+    }
+    button:hover{
+      
+      scale: 1.1;
     }
 
     .contact {
@@ -348,6 +363,7 @@
     }
 
     .contact input:first-child {
+      
       background-color: white;
       padding-inline: 5px;
       border: 1px rgb(63, 63, 63) solid;
@@ -366,6 +382,12 @@
       font-size: 1.1rem;
       color: white;
       background-color: #2e2e2e;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    input:last-child:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      scale: 1.1;
+      transition: all linear 0.1s;
     }
 
     footer {
@@ -655,14 +677,14 @@
       </div>
       <div class="hero">
         <div class="info">
-          <h1>Find Your Perfect <br /><span>Rental</span> Space</h1>
+          <h1>Find Your Perfect <br /><span id="changingText">Rental</span> Space</h1>
           <p>
             Discover your dream space at Aseries Homes. Explore a variety of
             rental options just a click away
           </p>
           <form action="">
             <input type="search" placeholder="search by location" />
-            <input type="submit" />
+            <input type="submit" value="submit"/>
           </form>
         </div>
         <div class="img">
@@ -812,7 +834,7 @@
       <p>For any inquiries, feel free to reach out to us.</p>
       <form action="">
         <input type="email" name="" id="" placeholder="email address" />
-        <input type="submit" />
+        <input type="submit" value="submit" />
       </form>
       <p>
         For more information, contact our real estate agents at (123) 456-7890
@@ -882,6 +904,17 @@
           clearInterval(intervalId);
         }
       );
+      var textElement = $("#changingText");
+            var words = ["Rental", "Home"];
+            var currentindex = 0;
+
+            function changeText() {
+                textElement.text(words[currentindex]);
+                currentindex = (currentindex + 1) % words.length;
+            }
+
+            setInterval(changeText, 2000); // Change every 2000 milliseconds (2 seconds)
+            changeText(); // Initial text
 
 
     });
