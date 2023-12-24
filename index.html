@@ -51,6 +51,8 @@
       transition: all 0.5s linear;
       justify-content: center;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Circular', '-apple-system', 'BlinkMacSystemFont', 'Roboto', 'Helvetica Neue', 'sans-serif';
     }
 
     .fa {
@@ -265,16 +267,18 @@
 
     .catalog.products {
       flex-wrap: wrap;
+      margin-inline: 2%;
       margin: 0;
+      gap: 1.5%;
+      justify-content: center;
       flex-direction: row;
-      gap: 2%;
     }
 
     .card {
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      min-width: 170px;
+      min-width: 180px;
       justify-content: center;
       width: 22%;
       margin: 3px;
@@ -286,6 +290,7 @@
     .card:hover {
       scale: 1.01;
     }
+
     .card h3,
     .card p {
       margin: 3px;
@@ -301,14 +306,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 10px;
+      border-radius: 20px;
       overflow: hidden;
       z-index: 99;
       aspect-ratio: 4/3.5;
     }
 
     .card .img img {
-      border-radius: 10px;
+      border-radius: 15px;
       height: auto;
       object-fit: fill;
       width: 100%;
@@ -316,7 +321,13 @@
     }
 
     .card h3 {
-      font-size: 1.2rem;
+      font-family: 'Circular', '-apple-system', 'BlinkMacSystemFont', 'Roboto', 'Helvetica Neue', 'sans-serif';
+      font-size: 0.9375rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .card p{
+      font-size: 1em;
     }
 
     button {
@@ -529,7 +540,8 @@
     .loader::after {
       --s: -1, -1;
     }
-    #c-slider{
+
+    #c-slider {
       width: 100%;
       margin-inline: 100px;
       display: flex;
@@ -540,7 +552,8 @@
       justify-content: center;
       bottom: 0;
     }
-    #c-slider li{
+
+    #c-slider li {
       list-style-type: none;
       border-radius: 50%;
       bottom: 0;
@@ -549,6 +562,7 @@
       width: auto;
       background-color: #55555598;
     }
+
     #c-slider li.active {
       background-color: #ffffffb4;
     }
@@ -600,7 +614,7 @@
     #btn1 img,
     #btn2 img {
       width: 50%;
-      
+
       height: 50%;
     }
 
@@ -612,7 +626,9 @@
     #btn2 {
       right: 3px;
     }
-    .card:hover #btn1,.card:hover #btn2{
+
+    .card:hover #btn1,
+    .card:hover #btn2 {
       display: flex;
     }
 
@@ -628,10 +644,19 @@
         align-items: center;
       }
 
-      .card {
+      .card  {
+        min-width: 80%;
         margin: 15px 0;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        tap-highlight-color: transparent;
       }
-
+      .card .img{
+        border-radius: 10px;
+      }
+      .card p,.card h3{
+        font-size: 1.2em;
+      }
       .hero .info,
       .hero .img {
         min-height: unset !important;
@@ -977,19 +1002,19 @@
       });
 
       var slider = $('#slider');
-      slider.on('hover', function(){
+      slider.on('hover', function () {
         $('#btn1').show();
       });
       const imglist = [
-      'apt1/IMG-20231219-WA0027.jpg',
-'apt1/IMG-20231219-WA0028.jpg',
-'apt1/IMG-20231219-WA0029.jpg',
-'apt1/IMG-20231219-WA0030.jpg',
-'apt1/IMG-20231219-WA0032.jpg',
-'apt1/IMG-20231219-WA0033.jpg',
-'apt1/IMG-20231219-WA0034.jpg',
-'apt1/IMG-20231219-WA0035.jpg',
-'apt1/IMG-20231219-WA0036.jpg'
+        'apt1/IMG-20231219-WA0027.jpg',
+        'apt1/IMG-20231219-WA0028.jpg',
+        'apt1/IMG-20231219-WA0029.jpg',
+        'apt1/IMG-20231219-WA0030.jpg',
+        'apt1/IMG-20231219-WA0032.jpg',
+        'apt1/IMG-20231219-WA0033.jpg',
+        'apt1/IMG-20231219-WA0034.jpg',
+        'apt1/IMG-20231219-WA0035.jpg',
+        'apt1/IMG-20231219-WA0036.jpg'
       ];
       slider.prepend('<img id="sImage" src="apt1/IMG-20231219-WA0036.jpg" />');
       let currentIndex = 0;
@@ -998,26 +1023,26 @@
       function updateImage() {
         $('#sImage').attr('src', imglist[currentIndex]);
         $('#c-slider li').removeClass('active');
-        if(currentIndex<3){
+        if (currentIndex < 3) {
           $('#c-slider li').eq(currentIndex).addClass('active');
-        }else{
+        } else {
           $('#c-slider li').eq(3).addClass('active');
         }
       }
-      $('#c-slider li').on('click', function(){
-        currentIndex=$(this).index();
+      $('#c-slider li').on('click', function () {
+        currentIndex = $(this).index();
         $('#sImage').attr('src', imglist[currentIndex]);
         updateImage();
       });
-  function showNextImage() {
-    currentIndex = (currentIndex + 1) % imglist.length;
-    updateImage();
-  }
-  
-  function showPreviousImage() {
-    currentIndex = (currentIndex - 1 + imglist.length) % imglist.length;
-    updateImage();
-  }
+      function showNextImage() {
+        currentIndex = (currentIndex + 1) % imglist.length;
+        updateImage();
+      }
+
+      function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + imglist.length) % imglist.length;
+        updateImage();
+      }
       $('#btn2').on('click', showNextImage);
       $('#btn1').on('click', showPreviousImage);
 
