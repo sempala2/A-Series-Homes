@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      header{
+        align-items: center;  
+        flex-direction: column;
+        height: fit-content !important;
+        width: 100%;
+        position: fixed;
+        top: 55px;
+        z-index: 999;
+        background-color: white;
+        border-bottom: #00000023 1px solid;
+      }
+      .nav2{
+        margin: 0;
+        width: 90%;
+        align-items:center ;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav2 input:first-child{
+        border: 1px solid #0000003f;
+        border-radius: 100px;
+        min-width: 100px;
+        height: 40px;
+        padding-inline: 20px;
+        font-size: 1.08em;
+      }
+      form{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 0;
+        justify-self: center;
+      }
+      .nav2 input:last-child{
+        display: none;
+      }
+      .nav2 input:focus{
+        border-radius: 10px 0 0 10px;
+      }
+      .nav2 input:focus + input:last-child{
+        display: block;
+        border-radius: 0 10px 10px  0 ;
+        border: 1px solid #0000003f;
+        height: 40px;
+        padding-inline: 10px;
+        font-size: 1.08em;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.099);
+      }
+      .nav2 input:hover{
+        scale: 1.02;
+      }
+
+      .nav2 div{
+        cursor: pointer;
+        display: flex;
+        border: 1px #00000047 solid;
+        padding: 10px 15px;
+        gap: 10px;
+        border-radius: 10px;
+      }
+      .nav2 div:hover{
+        scale: 1.01;
+        box-shadow: 0.1px 0.1px 5px rgba(0, 0, 0, 0.36);
+      }
+      #filter{
+        
+      }
+      .nav2 div img{
+        width: 20px;
+      }
+      main{
+        z-index: 1;
+        margin-top: 140px;
+      }
+    </style>
+</head>
+<body>
+    <div class="root">
+      <header>
+        <div class="nav">
+          <nav>
+            <div class="logo"><img src="img/logo.png" alt="" /></div>
+            <ul id="menu-ct">
+              <li><a href="apartments.html">Apartments</a></li>
+              <li><a href="">Homes</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <img class="menu" id="menu" src="menu.png" alt="" width="40px" />
+          </nav>
+        </div>
+         <div class="nav2" >
+          <div id="filter">
+            <img src="img/Slider.png" alt="">
+            filter
+          </div>
+          <form action="me.php">
+            <input type="search" placeholder="search location">
+            <input type="submit" value="search" name="earch" id="">
+          </form>
+          <div>
+            <img src="img/menu.png" alt="">
+            <img src="img/profile.svg" alt="">
+          </div>
+         </div>
+      </header>
+      <main>
+        <div class="catalog products">
+          <div class="card">
+            <div class="img" id="slider">
+              <div id="btn1">
+                <img src="img/next.png" alt="">
+              </div>
+              <div id="btn2">
+                <img src="img/next.png" alt="">
+              </div>
+              <ul id="c-slider">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4 <img height="20" width="20" src="img/bdrm.svg" alt=""> &#160 1 <img height="20" width="20"
+                src="img/tv.svg" alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt4/IMG-20231219-WA0043.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0063.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0036.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0039.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+          
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt4/IMG-20231219-WA0043.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0063.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0036.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0039.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt4/IMG-20231219-WA0043.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0063.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0036.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0039.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt4/IMG-20231219-WA0043.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt2/IMG-20231219-WA0063.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+  
+          <div class="card">
+            <div class="img">
+              <img src="apt1/IMG-20231219-WA0036.jpg" alt="" />
+            </div>
+            <h3>Luxury Villa, Kampala</h3>
+            <p>4<img height="20" width="20" src="img/bdrm.svg" alt="">&#160 1 <img height="20" width="20" src="img/tv.svg"
+                alt=""> &#160 2<img height="20" width="20" src="img/bthrm.svg" alt=""></p>
+            <p>Ugx.150,000 / night</p>
+          </div>
+          <!------------------------------------------------->
+        </div>
+      </main>
+      <footer>
+        
+      </footer>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
