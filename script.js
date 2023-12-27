@@ -13,7 +13,6 @@
 
         menuCt.slideToggle();
       });
-
       var slider = $('#slider');
       slider.on('hover', function () {
         $('#btn1').show();
@@ -69,7 +68,9 @@
       }
 
       setInterval(changeText, 2000); // Change every 2000 milliseconds (2 seconds)
-      changeText(); // Initial text
-
-
+      changeText(); // Initial tex
+      
     });
+    function link(location) {
+      window.open(location, "_self");
+    }

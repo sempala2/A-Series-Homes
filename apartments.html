@@ -17,6 +17,9 @@
         background-color: white;
         border-bottom: #00000023 1px solid;
       }
+      .root{
+        background-color: #f6f6f6;
+      }
       .nav2{
         margin: 0;
         width: 90%;
@@ -41,7 +44,10 @@
         justify-self: center;
       }
       .nav2 input:last-child{
-        display: none;
+        background-color: #00000000;
+        border: #00000000 1px solid;
+        color: #00000000;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
       }
       .nav2 input:focus{
         border-radius: 10px 0 0 10px;
@@ -51,9 +57,12 @@
         border-radius: 0 10px 10px  0 ;
         border: 1px solid #0000003f;
         height: 40px;
+        cursor: pointer;
+        background-color: #a88e25;
         padding-inline: 10px;
         font-size: 1.08em;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.099);
+        color: white;
       }
       .nav2 input:hover{
         scale: 1.02;
@@ -81,6 +90,12 @@
         z-index: 1;
         margin-top: 140px;
       }
+      @media (max-width: 650px) {
+        .nav2{
+          flex-direction: column;
+          height: fit-content;
+          padding: 10px 0;
+      }}
     </style>
 </head>
 <body>
@@ -91,7 +106,7 @@
             <div class="logo"><img src="img/logo.png" alt="" /></div>
             <ul id="menu-ct">
               <li><a href="apartments.html">Apartments</a></li>
-              <li><a href="">Homes</a></li>
+              <li><a href="/A-Series-Homes/">Homes</a></li>
               <li><a href="">Blog</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -105,7 +120,7 @@
           </div>
           <form action="me.php">
             <input type="search" placeholder="search location">
-            <input type="submit" value="search" name="earch" id="">
+            <input type="submit" value="search">
           </form>
           <div>
             <img src="img/menu.png" alt="">
@@ -136,7 +151,7 @@
             <p>Ugx.150,000 / night</p>
           </div>
           <!------------------------------------------------->
-  
+
           <div class="card">
             <div class="img">
               <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
