@@ -1,11 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Room</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .nav {
+        border-bottom: 1.5px solid #a88e25;
+      }
+      main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      main .content{
+        width: 90%;
+      }
+      hr{
+        width: 100%;
+        margin: 20px 0;
+      }
+      .content h2{
+        margin: 5px 0;
+      }
+      .content p{
+        font-size: 1.1rem;
+        margin: 0;
+      }
+      .content .description{
+        margin-top: 3%;
+        width: 100%;
+      }
+      .g-flex {
+        display: flex;
+        gap: 3%;
+        justify-content: center;
+        width: 90%;
+        margin-top: 45px;
+        padding: 10px  0;
+        max-height: 350px;
+      }
+      .g-flex *{
+        margin: 0;
+      }
+      .g-main{
+        width: 50%;
+      }
+      .g-main img{
+        border-radius: 5px;
+        width: 100%;
+        height: 103%;
+        object-fit: cover;
+        object-position: center;
+
+      }
+      .g-second{
+        width: 50%;
+        display: flex;
+        gap: 2%;
+        flex-wrap: wrap;
+      }
+      .g-second img{
+        aspect-ratio: 4/2.8;
+        width: 45%;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+      .landlord{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .landlord img{
+        width: 50px;
+        height: 50px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      }
+      .landlord h3{
+        margin: 3px 0;
+      }
+      .whtf{
+        margin-top: 4%;
+        width: 90%;
+      }
+      .whtf h2{
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <div class="nav">
+          <nav>
+            <div class="logo"><img src="img/logo.png" alt="" /></div>
+            <ul id="menu-ct">
+              <li><a href="apartments.html">Apartments</a></li>
+              <li><a href="/A-Series-Homes/">Homes</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <img class="menu" id="menu" src="menu.png" alt="" width="40px" />
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="g-flex">
+            <div class="g-main">
+              <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
+            </div>
+            <div class="g-second">
+              <img src="apt1/IMG-20231219-WA0027.jpg" alt="" />
+              <img src="apt1/IMG-20231219-WA0029.jpg" alt="" />
+              <img src="apt1/IMG-20231219-WA0030.jpg" alt="" />
+              <img src="apt1/IMG-20231219-WA0032.jpg" alt="" />
+            </div>
+        </div>
+        <div class="content">
+            <h2>Kiyumba Apartments, Kampala</h2>
+            <p>2 Bedroom, 2 Bathroom, 1 livingroom</p>
+            <div class="description">
+                <h2>Description</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error iure eaque quo sint asperiores quos quis, molestiae inventore dolorum, perferendis magnam quibusdam? Est, velit fuga nulla deserunt nisi optio ipsum.</p>
+            </div>
+            <hr>
+            <div class="landlord">
+                <img src="apt1/IMG-20231219-WA0027.jpg" alt="">
+                <div class="l-info">
+                    <h3>Kiyumba James</h3>
+                    <p>landlord</p>
+                </div>
+            </div>
+        </div>
+        <section class="whtf">
+            <h2>What You Will Find</h2>
+        </section>
+      </main>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
