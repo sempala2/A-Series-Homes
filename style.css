@@ -5,6 +5,10 @@
   }
 }
 
+@font-face {
+  font-family: inter;
+  src: url(font/Inter-Regular.ttf);
+}
 :root {
   color-scheme: only light;
 }
@@ -44,8 +48,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  font-family: "Circular", "-apple-system", "BlinkMacSystemFont", "Roboto",
-    "Helvetica Neue", "sans-serif";
+  font-family: inter;
 }
 
 .fa {
@@ -78,7 +81,7 @@ body {
 }
 
 .root {
-  font-family: sans-serif;
+  font-family: inter;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -275,7 +278,6 @@ nav ul li:last-child a {
 .card {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   min-width: 200px;
   justify-content: center;
   width: 22%;
@@ -297,6 +299,7 @@ nav ul li:last-child a {
   display: flex;
   margin-left: 5px;
   align-items: center;
+  cursor: pointer;
 }
 
 .card .img {
@@ -320,8 +323,7 @@ nav ul li:last-child a {
 }
 
 .card h3 {
-  font-family: "Circular", "-apple-system", "BlinkMacSystemFont", "Roboto",
-    "Helvetica Neue", "sans-serif";
+  font-family: inter;
   font-size: 0.9375rem;
   letter-spacing: 1px;
   font-weight: 600;
@@ -436,6 +438,7 @@ footer ul {
   user-select: none;
   gap: 5px;
   width: 80%;
+  font-family: sans-serif;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
@@ -553,6 +556,7 @@ section {
 #c-slider li {
   list-style-type: none;
   border-radius: 50%;
+  cursor: pointer;
   bottom: 0;
   height: 11px;
   aspect-ratio: 1/1;
@@ -611,7 +615,7 @@ section {
 #btn1 img,
 #btn2 img {
   width: 50%;
-
+  cursor: pointer;
   height: 50%;
 }
 
