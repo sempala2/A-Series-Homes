@@ -69,6 +69,10 @@
 
       setInterval(changeText, 2000); // Change every 2000 milliseconds (2 seconds)
       changeText(); // Initial tex
+
+      $('.card h3, .card p').on('click',function () {
+        window.open('room.html', "_self");
+      });
       
     });
     function link(location) {

@@ -95,7 +95,21 @@
           flex-direction: column;
           height: fit-content;
           padding: 10px 0;
-      }}
+          position: relative;
+      }
+      .nav2 div{
+        position: fixed;
+        bottom: 10px;
+        background-color: white;
+        right: 10px;
+
+      }
+      .nav2 #filter{
+        right: unset;
+        left: 20px;
+      }
+    
+    }
     </style>
 </head>
 <body>
@@ -105,10 +119,10 @@
           <nav>
             <div class="logo"><img src="img/logo.png" alt="" /></div>
             <ul id="menu-ct">
+              <li><a href="index.html">Home</a></li>
               <li><a href="apartments.html">Apartments</a></li>
-              <li><a href="/A-Series-Homes/">Homes</a></li>
               <li><a href="">Blog</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <img class="menu" id="menu" src="menu.png" alt="" width="40px" />
           </nav>
@@ -449,7 +463,11 @@
         </div>
       </main>
       <footer>
-        
+        <p>© ASeriesHomes Inc. All rights reserved.</p>
+        <ul>
+          <li>Terms of service</li>
+          <li>privacy policy</li>
+        </ul>
       </footer>
     </div>
     <script src="jquery.js"></script>
