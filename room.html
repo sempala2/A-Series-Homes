@@ -108,7 +108,6 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-
       }
       .g-second{
         width: 50%;
@@ -175,6 +174,27 @@
           min-height: 200px;
         }
       }
+      .g-flex *{
+        transition: all .2s ease-in-out;
+      }
+      .g-flex img:hover{
+        cursor: pointer;
+        filter: brightness(60%);
+        scale: 1.03;
+      }
+      #fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: rgba(255, 255, 255, 0.64);
+}
     </style>
   </head>
   <body>
@@ -224,8 +244,8 @@
         </div>
         <div class="payment">
           <div class="card">
-            <p><b>$160 </b>&nbsp day</p>
-            <input type="text" placeholder="tel: +256 71234568">
+            <p><b>$160 </b>&nbsp Day</p>
+            <input type="tel" placeholder="tel: +256 71234568">
             <textarea name="" id="" cols="20" rows="5" placeholder="Booking message"></textarea>
             <div class="btns">
               <button>Contact</button>
@@ -238,6 +258,7 @@
         <h2>What You Will Find</h2>
         </section>
       </main>
+      <div id="fullpage" onclick="this.style.display='none';"></div>
       <footer>
         <p>© ASeriesHomes Inc. All rights reserved.</p>
         <ul>
@@ -248,5 +269,17 @@
     </div>
     <script src="jquery.js"></script>
     <script src="script.js"></script>
+    <script>
+      function getPics() {} //just for this demo
+const imgs = document.querySelectorAll('.g-flex img');
+const fullPage = document.querySelector('#fullpage');
+
+imgs.forEach(img => {
+  img.addEventListener('click', function() {
+    fullPage.style.backgroundImage = 'url(' + img.src + ')';
+    fullPage.style.display = 'block';
+  });
+});
+    </script>
   </body>
 </html>

@@ -63,12 +63,15 @@
       var currentindex = 0;
 
       function changeText() {
-        textElement.text(words[currentindex]);
-        currentindex = (currentindex + 1) % words.length;
+        textElement.fadeOut(1000, function () {
+          // This callback is executed after the fadeOut is complete
+          textElement.text(words[currentindex]).fadeIn(1000);
+          currentindex = (currentindex + 1) % words.length;
+        });
       }
 
-      setInterval(changeText, 2000); // Change every 2000 milliseconds (2 seconds)
-      changeText(); // Initial tex
+      setInterval(changeText, 3000); // Change every 2000 milliseconds (2 seconds)
+      changeText(); // Initial texF
 
       $('.card h3, .card p').on('click',function () {
         window.open('room.html', "_self");

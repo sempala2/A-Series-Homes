@@ -4,7 +4,9 @@
     background-color: #f8f6f1;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: inter;
   src: url(font/Inter-Regular.ttf);
@@ -232,6 +234,7 @@ nav ul li:last-child a {
   background-color: white;
   width: 60%;
   color: #2e2e2e;
+  font-size: 1.1em;
   border: #2e2e2ea9 1px solid;
 }
 
@@ -610,12 +613,12 @@ section {
   width: 10%;
   display: none;
   box-shadow: 0.2px 0.2px 7px #00000090;
+  cursor: pointer;
 }
 
 #btn1 img,
 #btn2 img {
   width: 50%;
-  cursor: pointer;
   height: 50%;
 }
 
@@ -634,6 +637,12 @@ section {
 }
 
 @media (max-width: 650px) {
+  .catalog h2 {
+    width: 95%;
+    font-size: 1.8rem;
+    text-align: center;
+
+  }
   .dir .d {
     width: 90%;
   }

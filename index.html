@@ -13,6 +13,8 @@
       align-items: center;
     }
   </style>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -42,7 +44,7 @@
           </p>
           <form action="">
             <input type="search" placeholder="search by location" />
-            <input type="submit" value="submit" />
+            <input type="submit" value="search" />
           </form>
         </div>
         <div class="img">
@@ -60,7 +62,7 @@
     <section class="catalog" id="apt">
       <h2>Featured Apartments</h2>
       <div class="catalog products">
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img" id="slider">
             <div id="btn1">
               <img src="img/next.png" alt="">
@@ -82,7 +84,7 @@
         </div>
         <!------------------------------------------------->
 
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img">
             <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
           </div>
@@ -93,7 +95,7 @@
         </div>
         <!------------------------------------------------->
 
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img">
             <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
           </div>
@@ -104,7 +106,7 @@
         </div>
         <!------------------------------------------------->
 
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img">
             <img src="apt4/IMG-20231219-WA0043.jpg" alt="" />
           </div>
@@ -115,7 +117,7 @@
         </div>
         <!------------------------------------------------->
 
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img">
             <img src="apt3/IMG-20231219-WA0052.jpg" alt="" />
           </div>
@@ -126,7 +128,7 @@
         </div>
         <!------------------------------------------------->
 
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img">
             <img src="apt2/IMG-20231219-WA0063.jpg" alt="" />
           </div>
@@ -137,7 +139,7 @@
         </div>
         <!------------------------------------------------->
 
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img">
             <img src="apt1/IMG-20231219-WA0036.jpg" alt="" />
           </div>
@@ -148,7 +150,7 @@
         </div>
         <!------------------------------------------------->
 
-        <div class="card">
+        <div data-aos="zoom-in" class="card">
           <div class="img">
             <img src="apt2/IMG-20231219-WA0039.jpg" alt="" />
           </div>
@@ -159,7 +161,7 @@
         </div>
         <!------------------------------------------------->
       </div>
-      <button onclick='link("apartments.html")'>show more</button>
+      <button data-aos="fade-up" onclick='link("apartments.html")'>show more</button>
     </section>
     <section class="directions">
       <h2>It's Qick. All Online. 100% Safe.</h2>
@@ -227,6 +229,7 @@
   <script src="jquery.js"></script>
   <script src="script.js"></script>
   <script>
+    AOS.init();
   </script>
 </body>
 
