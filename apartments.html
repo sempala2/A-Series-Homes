@@ -26,7 +26,8 @@
         align-items:center ;
         height: 60px;
         display: flex;
-        justify-content: space-between;
+        gap: 1%;
+        justify-content: center;
       }
       .nav2 input:first-child{
         border: 1px solid #0000003f;
@@ -80,9 +81,6 @@
         scale: 1.01;
         box-shadow: 0.1px 0.1px 5px rgba(0, 0, 0, 0.36);
       }
-      #filter{
-        
-      }
       .nav2 div img{
         width: 20px;
       }
@@ -91,23 +89,6 @@
         margin-top: 140px;
       }
       @media (max-width: 650px) {
-        .nav2{
-          flex-direction: column;
-          height: fit-content;
-          padding: 10px 0;
-          position: relative;
-      }
-      .nav2 div{
-        position: fixed;
-        bottom: 10px;
-        background-color: white;
-        right: 10px;
-
-      }
-      .nav2 #filter{
-        right: unset;
-        left: 20px;
-      }
     
     }
     </style>
@@ -138,10 +119,6 @@
             <input type="search" placeholder="search location">
             <input type="submit" value="search">
           </form>
-          <div>
-            <img src="img/menu.png" alt="">
-            <img src="img/profile.svg" alt="">
-          </div>
          </div>
       </header>
       <main>
