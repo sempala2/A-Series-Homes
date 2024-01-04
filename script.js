@@ -73,7 +73,7 @@
       setInterval(changeText, 3000); // Change every 2000 milliseconds (2 seconds)
       changeText(); // Initial texF
 
-      $('.card h3, .card p').on('click',function () {
+      $('.catalog .card h3, .catalog .card p').on('click',function () {
         window.open('room.html', "_self");
       });
       
