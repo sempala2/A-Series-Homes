@@ -160,6 +160,9 @@ nav ul li:last-child:hover {
   scale: 1.05;
   cursor: pointer;
 }
+.hide{
+  display: none !important;
+}
 
 nav ul a {
   line-height: 100%;

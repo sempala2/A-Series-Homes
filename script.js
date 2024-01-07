@@ -1,6 +1,7 @@
     $(document).ready(function () {
       $('.root').css('display', 'flex');
       $('.loader').css('display', 'none');
+      
       $("#menu").click(function () {
         var menu = $("#menu");
         var menuCt = $("#menu-ct");
@@ -50,7 +51,6 @@
         currentIndex = (currentIndex + 1) % imglist.length;
         updateImage();
       }
-
       function showPreviousImage() {
         currentIndex = (currentIndex - 1 + imglist.length) % imglist.length;
         updateImage();
@@ -72,12 +72,11 @@
 
       setInterval(changeText, 3000); // Change every 2000 milliseconds (2 seconds)
       changeText(); // Initial texF
-
-      $('.catalog .card h3, .catalog .card p').on('click',function () {
-        window.open('room.html', "_self");
-      });
       
     });
+    function room192(params) {
+      
+    }
     function link(location) {
       window.open(location, "_self");
     }
