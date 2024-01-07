@@ -26,7 +26,7 @@
         <nav>
           <div class="logo"><img src="img/logo.png" alt="" /></div>
           <ul id="menu-ct">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="apartments.html">Apartments</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -78,7 +78,7 @@ if ($result) {
       // Output the card with dynamic content from the database
       echo '<div data-aos="zoom-in" class="card">';
       echo '<div class="img slider">';
-      echo '<img src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" alt="" />';
+      echo '<img src="uploads/images/' .($row['image']) . '" alt="" />';
       echo '</div>';
       echo '<div class="room_id">';
       echo '<p class="hide">' . $row['id'] .'</p>';
@@ -125,7 +125,7 @@ $conn->close();
       <div class="dir">
         <div class="d">
           <h3>1</h3>
-          <h4>Pick A Places</h4>
+          <h4>Pick A Place</h4>
           <p>
             Explore our high-quality rooms and apartments. Save favorites. Get
             alerts. Finding your dream home could not be easier.
@@ -189,14 +189,7 @@ $conn->close();
     AOS.init();
   </script>
   <script>
-    const apts = document.querySelectorAll(".room_id");
-    apts.forEach((apt) => {
-      
-        apt.addEventListener("click", function () {
-          let text = apt.childNodes[0].textContent;
-          window.open("room.php?id="+text, "_self");
-        });
-      });
+    
   </script>
 </body>
 

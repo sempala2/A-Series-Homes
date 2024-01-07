@@ -21,6 +21,7 @@
         flex-direction: column;
         align-items: center;
         width: 90%;
+        margin-bottom: 10%;
       }
       .cont-pay {
         width: 98%;
@@ -108,6 +109,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius:5px;
         object-position: center;
       }
       .g-second {
@@ -119,6 +121,7 @@
       }
       .g-second img {
         aspect-ratio: 4/2.8;
+        border-radius:5px;
         width: 48%;
         height: 49%;
         object-fit: cover;
@@ -131,7 +134,6 @@
       }
       .landlord img {
         width: 50px;
-        height: 50px;
         aspect-ratio: 1/1;
         border-radius: 50%;
       }
@@ -207,6 +209,14 @@
     $sql = "SELECT * FROM apartments where id='$room_id' ";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
+    $landlord =$row['landlord'];
+    $sql2 = "SELECT * FROM landlord where id='$landlord' ";
+    $result2 = $conn->query($sql2);
+    $row2 = $result2->fetch_assoc();
+    $images = explode(',', $row['images']);
+    // foreach ($images as $path) {
+    //     echo '<img src="uploads/images/' . trim($path) . '" alt="Image">';
+    // }
     ?>
     <div class="root">
       <header>
@@ -214,7 +224,7 @@
           <nav>
             <div class="logo"><img src="img/logo.png" alt="" /></div>
             <ul id="menu-ct">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index1.php">Home</a></li>
               <li><a href="apartments.html">Apartments</a></li>
               <li><a href="">Blog</a></li>
               <li><a href="index.html#contact">Contact</a></li>
@@ -226,18 +236,18 @@
       <main>
         <div class="g-flex">
           <div class="g-main">
-            <img src="apt1/IMG-20231219-WA0028.jpg" alt="" />
+            <img src="uploads/images/<?php echo $images[0] ?>" alt="" />
           </div>
           <div class="g-second">
-            <img src="apt1/IMG-20231219-WA0027.jpg" alt="" />
-            <img src="apt1/IMG-20231219-WA0029.jpg" alt="" />
-            <img src="apt1/IMG-20231219-WA0030.jpg" alt="" />
-            <img src="apt1/IMG-20231219-WA0032.jpg" alt="" />
+            <img src="uploads/images/<?php echo $images[1] ?>" alt="" />
+            <img src="uploads/images/<?php echo $images[2] ?>" alt="" />
+            <img src="uploads/images/<?php echo $images[3] ?>" alt="" />
+            <img src="uploads/images/<?php echo $images[4] ?>" alt="" />
           </div>
         </div>
         <div class="cont-pay">
           <div class="content">
-            <?php echo '<h2>' . $row['title'] .', '. $row['location'] . '</h2>';?>
+            <?php echo '<h2>' .$row['title'] .', '. $row['location'] . '</h2>';?>
             <p><?php echo $row['bedroom'] ?> Bedroom . <?php echo $row['bathroom'] ?> Bathroom . <?php echo $row['living'] ?> livingroom</p>
             <div class="description">
               <h2>Description</h2>
@@ -247,9 +257,9 @@
             </div>
             <hr />
             <div class="landlord">
-              <img src="apt1/IMG-20231219-WA0027.jpg" alt="" />
+              <?php echo '<img class="dp" src="uploads/images/' .($row2['image']) . '" alt="' .($row2['name']) . '" />';?>
               <div class="l-info">
-                <h3>Kiyumba James</h3>
+                <h3><?php echo $row2['name'] ?></h3>
                 <p>landlord</p>
               </div>
             </div>
@@ -272,9 +282,6 @@
             </div>
           </div>
         </div>
-        <section class="whtf">
-          <h2>What You Will Find</h2>
-        </section>
       </main>
       <div id="fullpage" onclick="this.style.display='none';"></div>
       <footer>

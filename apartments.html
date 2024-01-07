@@ -125,12 +125,7 @@
         <div class="catalog products">
           <div data-aos="zoom-in" class="card">
             <div class="img" id="slider">
-              <div id="btn1">
-                <img src="img/next.png" alt="">
-              </div>
-              <div id="btn2">
-                <img src="img/next.png" alt="">
-              </div>
+              
               <ul id="c-slider">
                 <li></li>
                 <li></li>
@@ -453,6 +448,14 @@
     <script src="script.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      const apts = document.querySelectorAll(".card");
+    apts.forEach((apt) => {
+        apt.addEventListener("click", function () {
+          window.open("room.html", "_self");
+        });
+      });
     </script>
 </body>
 </html>

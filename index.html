@@ -64,12 +64,6 @@
       <div class="catalog products">
         <div data-aos="zoom-in" class="card">
           <div class="img" id="slider">
-            <div id="btn1">
-              <img src="img/next.png" alt="">
-            </div>
-            <div id="btn2">
-              <img src="img/next.png" alt="">
-            </div>
             <ul id="c-slider">
               <li></li>
               <li></li>
@@ -168,7 +162,7 @@
       <div class="dir">
         <div class="d">
           <h3>1</h3>
-          <h4>Pick A Places</h4>
+          <h4>Pick A Place</h4>
           <p>
             Explore our high-quality rooms and apartments. Save favorites. Get
             alerts. Finding your dream home could not be easier.
@@ -230,6 +224,14 @@
   <script src="script.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+        const apts = document.querySelectorAll(".card");
+    apts.forEach((apt) => {
+        apt.addEventListener("click", function () {
+          window.open("room.html", "_self");
+        });
+      });
   </script>
 </body>
 

@@ -72,11 +72,14 @@
 
       setInterval(changeText, 3000); // Change every 2000 milliseconds (2 seconds)
       changeText(); // Initial texF
-      
+      const apts = document.querySelectorAll(".room_id");
+      apts.forEach((apt) => {
+          apt.addEventListener("click", function () {
+            let text = apt.childNodes[0].textContent;
+            window.open("room.php?id="+text, "_self");
+          });
+        });
     });
-    function room192(params) {
-      
-    }
     function link(location) {
-      window.open(location, "_self");
+      window.open(location,"_self");
     }
